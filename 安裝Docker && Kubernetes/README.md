@@ -64,3 +64,9 @@ $ sudo docker run -d -p 5000:5000 -v ~/storage:/var/lib/registry --name registry
 ```
 $ sudo vi /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 ```
+```
+Environment="KUBELET_EXTRA_ARGS=--node-ip=192.168.797.10”
+```
+> 額外設定 : IP設定為各節點的IP  
+
+```
