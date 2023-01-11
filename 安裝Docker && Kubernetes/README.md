@@ -66,7 +66,11 @@ $ sudo docker run -d -p 5000:5000 -v ~/storage:/var/lib/registry --name registry
 ```
 $ sudo vi /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 ```
+新增此行
 ```
 Environment="KUBELET_EXTRA_ARGS=--node-ip=192.168.797.10”
 ```
+```
+$ systemctl restart kubelet
+$  sudo kubeadm config images pull
 ```
