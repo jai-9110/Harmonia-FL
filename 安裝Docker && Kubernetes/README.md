@@ -48,10 +48,6 @@ $ sudo vi /etc/docker/daemon.json
 } 
 ```
 
-```
-$ systemctl restart docker
-$ sudo docker run -d -p 5000:5000 -v ~/storage:/var/lib/registry --name registry registry:2
-```
 > Master 運行Docker Registry服務
 <https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>  
 
@@ -59,7 +55,12 @@ $ sudo docker run -d -p 5000:5000 -v ~/storage:/var/lib/registry --name registry
 > ```  
 > $ sudo docker ps -a     // 找到運行registry的container  
 > $ sudo docker start <container name>   // 重啟registry服務  
-> ```  
+> ```
+
+```
+$ systemctl restart docker
+$ sudo docker run -d -p 5000:5000 -v ~/storage:/var/lib/registry --name registry registry:2
+```
 
 > 額外設定 : IP設定為各節點的IP  
 ```
