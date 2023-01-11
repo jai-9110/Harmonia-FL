@@ -20,7 +20,11 @@
 2. 設定VM網路
 ```
 sudo apt-get update
+```
+```
 sudo apt install ifupdown
+```
+```
 sudo nano /etc/network/interfaces
 ```
 ```
