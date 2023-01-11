@@ -33,3 +33,13 @@ $ kubectl port-forward --address 0.0.0.0 service/harmonia-gitea 3000
 |   | http://mnist-edge1:9080 | http://mnist-edge2:9080 |
 |   | http://mnist-edge2:9080 | http://mnist-edge3:9080 |
 |   | http://mnist-edge3:9080 |
+
+i. 設定儲存庫名稱並建立儲存庫
+![image](https://github.com/jai-9110/Harmonia-FL/blob/3fdf7d4949ffe4e8ddd2599e76cbfc30ea4768ce/picture/%E6%96%B0%E5%A2%9E%E5%84%B2%E5%AD%98%E5%BA%AB-2.png)
+ii. 點選設定，根據上方表格設定協作者
+![image](https://github.com/jai-9110/Harmonia-FL/blob/125fcb24cf2eb99f99aa2713b3461812d6ac8fbf/picture/%E8%A8%AD%E5%AE%9A%E5%8D%94%E4%BD%9C%E8%80%85.png)
+iii. 根據上方表格設定webhook，建立webhook，選擇Gitea
+![image](https://github.com/jai-9110/Harmonia-FL/blob/9d2d298791ca00380698b2592129329951d7f04b/picture/%E5%BB%BA%E7%AB%8Bwebhook.png)
+iv. 根據上方表格設定目標URL
+![image](https://github.com/jai-9110/Harmonia-FL/blob/93c9bbfb14e522ba3e76d79906215b796b09a5bc/picture/%E8%A8%AD%E5%AE%9AURL.png)
+3.  獲取GiteaUserToken
