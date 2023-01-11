@@ -19,5 +19,5 @@ $ sudo apt-get update
 ```
 $ sudo apt install -y kubelet=1.20.0-00 kubectl=1.20.0-00 kubeadm=1.20.0-00
 ```
-> 也可不指定K8S版本`  `
+> 也可不指定K8S版本  
 > $ sudo apt-get install -y kubelet kubeadm kubectl
