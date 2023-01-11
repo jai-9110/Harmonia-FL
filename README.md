@@ -17,4 +17,4 @@
    網卡2(enp0s8) : HostOnly       // 事先將主機網路管理員中的DHCP關閉
 ． Master : 100GB-Disk, 8192RAM, 4cpus    
 1. 新增host only的網卡
-   https://github.com/jai-9110/Harmonia-FL/blob/fc6cba6ba66fd6958071e22dffba9910fc18fef6/%E4%B8%BB%E6%A9%9F%E7%B6%B2%E8%B7%AF%E7%AE%A1%E7%90%86%E5%93%A1.png
+   ![image](https://github.com/jai-9110/Harmonia-FL/blob/fc6cba6ba66fd6958071e22dffba9910fc18fef6/%E4%B8%BB%E6%A9%9F%E7%B6%B2%E8%B7%AF%E7%AE%A1%E7%90%86%E5%93%A1.png)
