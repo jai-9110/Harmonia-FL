@@ -26,6 +26,6 @@ iface enp0s8 inet static
 address 192.168.97.10
 netmask 255.255.255.0 
 ```
-> 設定ip (VirtualBox設定)`  `
-> 根據Host-Only的網段作設定`  `
+> 設定ip (VirtualBox設定)  
+> 根據Host-Only的網段作設定  
 > (若是多台VM共用此網卡，可在192.168.71.1之後接0、1、2...，以此類推)
