@@ -8,7 +8,7 @@
    <https://youtu.be/aB18S_8bPhA>
 3. 安裝Mobaxterm
    <https://mobaxterm.mobatek.net/download.html>
-   * 專業版請詢問實驗室學長姊
+   **專業版請詢問實驗室學長姊**
    
 # VM設定
 * image : ubuntu-20.04.1-live-server-amd64.iso
