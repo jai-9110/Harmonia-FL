@@ -5,7 +5,7 @@
 
 1. Memory最好加到16GB，不然VM會跑不動
 2. 安裝Ubuntu Server
-   https://youtu.be/aB18S_8bPhA
+   <https://youtu.be/aB18S_8bPhA>
 3. 安裝Mobaxterm
    https://mobaxterm.mobatek.net/download.html
    * 專業版請詢問實驗室學長姊
