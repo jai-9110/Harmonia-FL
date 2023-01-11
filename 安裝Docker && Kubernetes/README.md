@@ -34,6 +34,9 @@ $ sudo apt-mark hold kubelet kubeadm kubectl
 > $ kubeadm reset  
 > ```
 
+
+> 設定Registry，IP為Master的IP(Registry的位置在Master)  
+> 若有叢集內有多台Worker也都設定成Master的IP
 ```
 $ sudo vi /etc/docker/daemon.json
 ```
@@ -44,8 +47,6 @@ $ sudo vi /etc/docker/daemon.json
     "insecure-registries": ["192.168.97.10:5000"]
 } 
 ```
-> 設定Registry，IP為Master的IP(Registry的位置在Master)  
-> 若有叢集內有多台Worker也都設定成Master的IP
 
 ```
 $ systemctl restart docker
@@ -60,13 +61,11 @@ $ sudo docker run -d -p 5000:5000 -v ~/storage:/var/lib/registry --name registry
 > $ sudo docker start <container name>   // 重啟registry服務  
 > ```  
 
-
+> 額外設定 : IP設定為各節點的IP  
 ```
 $ sudo vi /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 ```
 ```
 Environment="KUBELET_EXTRA_ARGS=--node-ip=192.168.797.10”
 ```
-> 額外設定 : IP設定為各節點的IP  
-
 ```
