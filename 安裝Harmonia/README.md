@@ -25,3 +25,4 @@ $ kubectl port-forward --address 0.0.0.0 service/harmonia-gitea 3000
 
 | `gitea` | `train-plan` | `global-model` | `local-model1` | `local-model2` | `local-model3` |
 |-----|:-------:|:-------:|:---|:---:|:---:|
+| `aggregator` | `可讀` | `可寫` | `可讀` | `可讀` | `可讀` |
