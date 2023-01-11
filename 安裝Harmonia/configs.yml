@@ -1,0 +1,85 @@
+# configs.yml
+
+# Aggregator Config
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aggregator-config
+data:
+  aggregator-config.yml: |
+    type: aggregator
+    notification:
+      type: push
+    gitUserToken: 98226223bbd73c4c8d03ba0f24f766ab306d0e27
+    aggregatorModelRepo:
+      gitHttpURL: http://aggregator@harmonia-gitea:3000/gitea/global-model.git
+    edgeModelRepos:
+      - gitHttpURL: http://aggregator@harmonia-gitea:3000/gitea/local-model1.git
+      - gitHttpURL: http://aggregator@harmonia-gitea:3000/gitea/local-model2.git
+      - gitHttpURL: http://aggregator@harmonia-gitea:3000/gitea/local-model3.git
+    trainPlanRepo:
+      gitHttpURL: http://aggregator@harmonia-gitea:3000/gitea/train-plan.git
+    logLevel: debug
+
+---
+# Edge1 Config
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edge1-config
+data:
+  edge-config.yml: |
+    type: edge
+    notification:
+      type: push
+    gitUserToken: 293cb2d85e9d178116b6948450e8c95a67fd2f0b
+    aggregatorModelRepo:
+      gitHttpURL: http://edge1@harmonia-gitea:3000/gitea/global-model.git
+    edgeModelRepo:
+      gitHttpURL: http://edge1@harmonia-gitea:3000/gitea/local-model1.git
+    trainPlanRepo:
+      gitHttpURL: http://edge1@harmonia-gitea:3000/gitea/train-plan.git
+    logLevel: debug
+
+---
+# Edge2 Config
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edge2-config
+data:
+  edge-config.yml: |
+    type: edge
+    notification:
+      type: push
+    gitUserToken: f5a195ebbcbea6569b22a538df9b9e2e726d7731
+    aggregatorModelRepo:
+      gitHttpURL: http://edge2@harmonia-gitea:3000/gitea/global-model.git
+    edgeModelRepo:
+      gitHttpURL: http://edge2@harmonia-gitea:3000/gitea/local-model2.git
+    trainPlanRepo:
+      gitHttpURL: http://edge2@harmonia-gitea:3000/gitea/train-plan.git
+    logLevel: debug
+
+---
+# Edge3 Config
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edge3-config
+data:
+  edge-config.yml: |
+    type: edge
+    notification:
+      type: push
+    gitUserToken: 9f86c2062d9705b28b1e68f77cf98ecacd56dbc3
+    aggregatorModelRepo:
+      gitHttpURL: http://edge3@harmonia-gitea:3000/gitea/global-model.git
+    edgeModelRepo:
+      gitHttpURL: http://edge3@harmonia-gitea:3000/gitea/local-model3.git
+    trainPlanRepo:
+      gitHttpURL: http://edge3@harmonia-gitea:3000/gitea/train-plan.git
+    logLevel: debug
