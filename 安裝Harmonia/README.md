@@ -26,3 +26,10 @@ $ kubectl port-forward --address 0.0.0.0 service/harmonia-gitea 3000
 | gitea | `train-plan` | `global-model` | `local-model1` | `local-model2` | `local-model3` |
 |-----|:-------:|:-------:|:---:|:---:|:---:|
 | aggregator | 可讀 | 可寫 | 可讀 | 可讀 | 可讀 |
+| edge1 | 可讀 | 可讀 | 可寫 | - | - |
+| edge2 | 可讀 | 可讀 | - | 可寫 | - |
+| edge3 | 可讀 | 可讀 | - | - | 可寫 |
+| <webhook> | http://mnist-aggregator:9080 | http://mnist-edge1:9080 | http://mnist-aggregator:9080 | http://mnist-aggregator:9080 | http://mnist-aggregator:9080 |
+|   | http://mnist-edge1:9080 | http://mnist-edge2:9080 |
+|   | http://mnist-edge2:9080 | http://mnist-edge3:9080 |
+|   | http://mnist-edge3:9080 |
