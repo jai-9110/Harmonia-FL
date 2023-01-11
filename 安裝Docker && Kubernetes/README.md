@@ -37,9 +37,12 @@ $ sudo apt-mark hold kubelet kubeadm kubectl
 ```
 $ sudo vi /etc/docker/daemon.json
 ```
-| {                                                 |
-|    "live-restore": true,                          |
-|    "group": "dockerroot",                         |
-|    "insecure-registries": ["192.168.97.10:5000"]  |
-|}                                                  |
-| ------------------------------------------------- |
+```
+{
+    "live-restore": true,
+    "group": "dockerroot",
+    "insecure-registries": ["192.168.97.10:5000"]
+} 
+```
+> 設定Registry，IP為Master的IP(Registry的位置在Master)  
+> 若有叢集內有多台Worker也都設定成Master的IP
