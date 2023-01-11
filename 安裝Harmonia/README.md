@@ -94,5 +94,45 @@ $ sudo nano mnist_deployment.yml
 ```
 $ kubectl apply -f mnist_deployment.yml
 
-**check :** $ kubectl get po
+check : $ kubectl get po
+```
+
+# 開始訓練
+```
+$ git clone http://127.0.0.1:3000/gitea/global-model.git
+$ pushd global-model
+
+$ git commit -m "pretrained model" --allow-empty
+$ git push origin master
+
+$ popd
+$ rm -rf global-model
+```
+--------------------------------------------------------------
+* 重推訓練上去前plan.json中的資料都要有所變更，才能成功執行新的訓練
+```
+$ git clone http://127.0.0.1:3000/gitea/train-plan.git
+$ pushd train-plan
+
+$ cat > plan.json << EOF
+{
+    "name": "MNIST",
+    "round": 10,
+    "edge": 3,
+    "EpR": 1,
+    "timeout": 1200,
+    "pretrainedModel": "master"
+}
+EOF
+
+$ git add plan.json
+$ git commit -m "train plan commit”
+$ git push origin master
+
+$ popd
+$ rm -rf train-plan
+```
+* 查看pod運行情況(log記錄檔)
+```
+$ kubectl logs <pod name> <container name> -f
 ```
