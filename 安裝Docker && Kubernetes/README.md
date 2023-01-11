@@ -71,5 +71,19 @@ Environment="KUBELET_EXTRA_ARGS=--node-ip=192.168.797.10”
 ```
 ```
 $ systemctl restart kubelet
-$  sudo kubeadm config images pull
+$ sudo kubeadm config images pull
 ```
+    
+# 安裝Calico
+* K8s網路介面選項 - Calico
+* 支援多節點，apiserver-advertise-address為Master的IP，pod-network-cidr不需要改
+```
+# kubeadm init --apiserver-advertise-address=192.168.97.10 --pod-network-cidr=192.168.244.0/24
+    
+$ mkdir -p $HOME/.kube
+$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+   
+* node名稱根據你的虛擬機名稱而定
+* Master可以當成Worker節點Deployment // all in one的方式
