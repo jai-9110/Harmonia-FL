@@ -33,3 +33,13 @@ $ sudo apt-mark hold kubelet kubeadm kubectl
 > $ sudo rm -rf ~/.kube  
 > $ kubeadm reset  
 > ```
+
+```
+$ sudo vi /etc/docker/daemon.json
+```
+| {                                                 |
+|    "live-restore": true,                          |
+|    "group": "dockerroot",                         |
+|    "insecure-registries": ["192.168.97.10:5000"]  |
+|}                                                  |
+| ------------------------------------------------- |
