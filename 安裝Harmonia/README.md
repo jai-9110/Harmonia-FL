@@ -24,5 +24,5 @@ $ kubectl port-forward --address 0.0.0.0 service/harmonia-gitea 3000
 ![image](https://github.com/jai-9110/Harmonia-FL/blob/c8e482deb27c0b17a6d1f4ea20bf553e0ba5fab9/picture/%E6%96%B0%E5%A2%9E%E5%84%B2%E5%AD%98%E5%BA%AB.png)
 
 | gitea | `train-plan` | `global-model` | `local-model1` | `local-model2` | `local-model3` |
-|-----|:-------:|:-------:|:---|:---:|:---:|
+|-----|:-------:|:-------:|:---:|:---:|:---:|
 | aggregator | 可讀 | 可寫 | 可讀 | 可讀 | 可讀 |
