@@ -87,3 +87,14 @@ $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
    
 * node名稱根據你的虛擬機名稱而定
 * Master可以當成Worker節點Deployment // all in one的方式
+```
+$ kubectl apply -f https://docs.projectcalico.org/archive/v3.20/manifests/calico.yaml
+```
+> calico v3.20是為了配合K8S v1.20.00  
+
+```
+check : $ kubectl get pods --all-namespaces
+```
+![image](https://github.com/jai-9110/Harmonia-FL/blob/7506d890317e3113283ec1b2ae137ce4e1555be0/picture/get_pod1.png)
+> 若是叢集內多台機器當Worker node  
+> <https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>
