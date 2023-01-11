@@ -23,7 +23,8 @@ sudo apt-get update
 sudo apt install ifupdown
 sudo nano /etc/network/interfaces
 ```
-| # NAT Network
+```
+# NAT Network
 auto enp0s3
 iface enp0s3 inet dhcp
 
@@ -31,4 +32,5 @@ iface enp0s3 inet dhcp
 auto enp0s8
 iface enp0s8 inet static
 address 192.168.97.10
-netmask 255.255.255.0 |
+netmask 255.255.255.0 
+```
