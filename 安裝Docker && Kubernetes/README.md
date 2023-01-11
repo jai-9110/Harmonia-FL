@@ -35,8 +35,8 @@ $ sudo apt-mark hold kubelet kubeadm kubectl
 > ```
 
 
-> 設定Registry，IP為Master的IP(Registry的位置在Master)  
-> 若有叢集內有多台Worker也都設定成Master的IP
+設定Registry，IP為Master的IP(Registry的位置在Master)
+若有叢集內有多台Worker也都設定成Master的IP
 ```
 $ sudo vi /etc/docker/daemon.json
 ```
@@ -48,10 +48,9 @@ $ sudo vi /etc/docker/daemon.json
 } 
 ```
 
-> Master 運行Docker Registry服務
-<https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>  
-
-> 只要關機，此registry服務就要重啟  
+Master 運行Docker Registry服務
+<https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>
+只要關機，此registry服務就要重啟  
 > ```  
 > $ sudo docker ps -a     // 找到運行registry的container  
 > $ sudo docker start <container name>   // 重啟registry服務  
