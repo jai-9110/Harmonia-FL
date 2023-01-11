@@ -58,4 +58,9 @@ $ sudo docker run -d -p 5000:5000 -v ~/storage:/var/lib/registry --name registry
 > ```  
 > $ sudo docker ps -a     // 找到運行registry的container  
 > $ sudo docker start <container name>   // 重啟registry服務  
-> ```
+> ```  
+
+
+```
+$ sudo vi /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+```
