@@ -44,7 +44,7 @@ $ kubectl port-forward --address 0.0.0.0 service/harmonia-gitea 3000
   ![image](https://github.com/jai-9110/Harmonia-FL/blob/93c9bbfb14e522ba3e76d79906215b796b09a5bc/picture/%E8%A8%AD%E5%AE%9AURL.png)  
  
 3.  獲取GiteaUserToken(以edge1為例)
-* 登入edge1，點選右上角，點選設定
+* 登入edge1，點選右上角，點選設定  
 ![image](https://github.com/jai-9110/Harmonia-FL/blob/79438b1925702b96fced4189b94dddc0135f12d4/picture/get_token-1.png)
 * 點選應用程式
 ![image](https://github.com/jai-9110/Harmonia-FL/blob/3c650ccbe5fe06f019ef6576873d251fc251d4ce/picture/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F.png)
